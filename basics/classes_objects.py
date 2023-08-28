@@ -1,4 +1,6 @@
 class Dog:
+    """_summary_
+    """
     pass
 
 
@@ -8,6 +10,8 @@ print(pepper)
 
 
 class ClassSchedule:
+    """_summary_
+    """
     # constructor
     def __init__(self, course, instructor, no_of_students, funded):
         self.course = course
@@ -22,9 +26,13 @@ class ClassSchedule:
         print(f"You successfully deleted {self.course}.")
 
     def display_course(self):
+        """_summary_
+        """
         print(f"Course: {self.course}, Instructor: {self.instructor}")
 
     def is_course_funded(self):
+        """_summary_
+        """
         if self.__funded:
             print(f"{self.course} is funded")
         else:
