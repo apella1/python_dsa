@@ -1,9 +1,6 @@
-"""_summary_
-
-    Returns:
-        _type_: _description_
-    """
-
+"""
+Encapsulation in python
+"""
 
 class UserInfo:
     """ class defining a user object
@@ -14,7 +11,7 @@ class UserInfo:
         self.email_address = email_address
 
     def check_username(self, username_to_check: str) -> bool:
-        """ A method that checks if the give username
+        """ returns true if the given username
             matches the actual username
         Args:
             username_to_check (str): possible username to be checked

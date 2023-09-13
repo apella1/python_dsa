@@ -21,7 +21,6 @@ class ClassSchedule:
         # private modifiers
         self.__funded = funded
     # destructor
-
     def __del__(self):
         print(f"You successfully deleted {self.course}.")
 

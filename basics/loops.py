@@ -20,9 +20,9 @@ teams = [["Elly", "Chris"], ["John", "Matt"],
 
 
 for team in teams:
-    for name in team:
-        if name.startswith("J"):
-            print(name)
+    for identity in team:
+        if identity.startswith("J"):
+            print(identity)
 
 
 for i in range(3):
@@ -30,11 +30,11 @@ for i in range(3):
 
 # while loop
 
-number = 8
+NUMBER = 8
 
-while number < 18:
+while NUMBER < 18:
     print("Nice!")
-    number += 1
+    NUMBER += 1
 
 
 # loops exercises
@@ -52,7 +52,7 @@ def divisible_by_ten(numbers):
     for n in numbers:
         if n % 10 == 0:
             count += 1
-            print(number, count)
+            print(NUMBER, count)
     return count
 
 
@@ -132,3 +132,41 @@ def delete_starting_odds(numbers):
 
 print(delete_starting_odds([3, 17, 13, 4, 5, 12, 6, 78]))
 print(delete_starting_odds([3, 17, 13]))
+print(delete_starting_evens([2]))
+
+
+def odd_indices(my_list: list[int]) -> list[int]:
+    """ Returns a new list with elements which are values
+    from the original list my_list with negative indices
+
+    Args:
+        my_list (list[int]): list of integers
+
+    Returns:
+        list[int]: new list from the negative indices of the initial list
+    """
+    odd_indices_values = []
+    for list_index in range(len(my_list)):
+        if list_index % 2 == 1:
+            odd_indices_values.append(my_list[list_index])
+
+    return odd_indices_values
+
+
+def odd_indices2(my_list):
+    new_list = []
+    for index in range(1, len(my_list), 2):
+        new_list.append(my_list[index])
+    return new_list
+
+
+for i in range(2, 20, 2):
+    print(i)
+
+
+def exponents(bases, powers):
+    new_list = []
+    for base in bases:
+        for power in powers:
+            new_list.append(base ** power)
+    return new_list
