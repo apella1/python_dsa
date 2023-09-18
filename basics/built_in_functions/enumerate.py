@@ -1,3 +1,4 @@
+"""This module covers the built in enumerate function"""
 fruits = ["bananas", "oranges", "apples", "strawberry"]
 
 for index, element in enumerate(fruits):
