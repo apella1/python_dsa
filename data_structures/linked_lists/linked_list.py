@@ -64,9 +64,37 @@ class LinkedList:
         self.length += 1
         return True
 
+    def pop(self):
+        """Removing an element at the end of the linked list"""
+        temp = self.head
+        pre = self.head
+
+        # No items in the linked list
+        if self.length == 0:
+            return None
+
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+            self.length = 0
+
+        # 2 or more items in the linked list
+        while (temp.next):
+            pre = temp
+            temp = temp.next
+        self.tail = pre
+        self.tail.next = None
+        self.length -= 1
+        if self.length == 0:
+            self.head = None
+            self.tail = None
+        return temp
+
 
 my_linked_list = LinkedList(5)
 my_linked_list.append(43)
 my_linked_list.append(4)
 my_linked_list.append(14)
+my_linked_list.print_list()
+my_linked_list.pop()
 my_linked_list.print_list()
