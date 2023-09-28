@@ -73,11 +73,6 @@ class LinkedList:
         if self.length == 0:
             return None
 
-        if self.length == 1:
-            self.head = None
-            self.tail = None
-            self.length = 0
-
         # 2 or more items in the linked list
         while (temp.next):
             pre = temp
@@ -90,11 +85,28 @@ class LinkedList:
             self.tail = None
         return temp
 
+    def prepend(self, value):
+        """Adding an element at the beginning of the linked list"""
+        new_node = Node(value)
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+            self.length += 1
+        temp = self.head
+        self.head = new_node
+        self.head.next = temp
+        self.length += 1
+
+    def insert(self, value, index):
+        """Inserting a value at the given index"""
+        new_node = Node(value)
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+
 
 my_linked_list = LinkedList(5)
-my_linked_list.append(43)
-my_linked_list.append(4)
-my_linked_list.append(14)
-my_linked_list.print_list()
-my_linked_list.pop()
+my_linked_list.append(6)
+my_linked_list.append(7)
+my_linked_list.prepend(4)
 my_linked_list.print_list()
