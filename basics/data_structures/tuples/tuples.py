@@ -1,13 +1,13 @@
-"""Built in python tuples"""
+"""Built in python tuple object"""
 # immutable sequences typically used to store collection of heterogenous data
 # e.g 2-tuples produced by enumerate
 # ! It's the comma that makes the tuple, not the parentheses
-# ! The parentheses are optional except while empty
+# ! The parentheses are optional except for an empty tuple
 
 characters = ["a", "b", "c", "d"]
 
 for index, character in enumerate(characters):
-    print(f"Index: {index}\nCharacter: {character}")
+    print((index, character))
 
 # Constructing tuples
 my_empty_tuple = ()
@@ -18,6 +18,7 @@ comma_separated_tuple_with_brackets = (2, 4, 6)
 tuple_from_builtin = tuple()
 
 print(tuple("abcd"))
+print(tuple("1234"))
 print(tuple(["a", "b", "c", "d"]))
 
 # To avoid ambiguity
@@ -26,4 +27,4 @@ print(tuple(["a", "b", "c", "d"]))
 
 # * For heterogenous collections of data where access by name is clearer
 # * than access by index, then collections.namedtuple()
-# *may be a more appropriate choice than a single tuple object
+# * may be a more appropriate choice than a simple tuple object
