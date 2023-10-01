@@ -1,8 +1,7 @@
 """Factory function for tuples with named fields"""
-
-# creating a 2-D point as a tuple (immutable)
 from collections import namedtuple
 
+# creating a 2-D point as a tuple (immutable)
 point = (2, 4)
 
 # Accessing the coordinates
@@ -27,9 +26,11 @@ print(point.x, point.y)
 
 Sport = namedtuple("Sport", "name players_number")
 Person = namedtuple("Person", "name children")
+Subject = namedtuple("Subject", "category has_prerequisites")
 
 football = Sport("Football", 11)
 john = Person("John", ["Pete", "Owen", "Parker"])
+maths = Subject("Mathematics", False)
 
 print(john.children)
 john.children.append("Tammy")
@@ -46,3 +47,4 @@ print(hash(football))
 # john isn't hashable since it has a mutable list object
 # ! traceback: unhashable type 'list'
 # print(hash(john))
+print(hash(maths))
