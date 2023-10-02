@@ -84,6 +84,14 @@ def same_values(lst1, lst2):
     return new_list
 
 
+def same_values_enumerate(lst1, lst2):
+    new_list = []
+    for index, value in enumerate(lst1):
+        if value == lst2(index):
+            new_list.append(index)
+    return new_list
+
+
 # 5 Reversed List
 def reversed_list(lst1, lst2):
     for index in range(len(lst1)):

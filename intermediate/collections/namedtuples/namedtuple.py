@@ -48,3 +48,25 @@ print(hash(football))
 # ! traceback: unhashable type 'list'
 # print(hash(john))
 print(hash(maths))
+
+
+Project = namedtuple("Project", "name number_of_people inception_year",
+                     defaults=["Long Ropes In Flower Gardens", 19, 2021])
+
+default_project = Project()
+print(default_project)
+
+
+print(divmod(4, 2))
+
+
+def custom_divmod(x, y):
+    """Specifying the remainder and quotient"""
+    DivMod = namedtuple("Divmod", "quotient remainder")
+    return DivMod(*divmod(x, y))
+
+
+result = custom_divmod(12, 6)
+
+print(result.quotient)
+print(result.remainder)
