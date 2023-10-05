@@ -7,6 +7,8 @@ life_stages["adolescence"] = "9-18"
 life_stages["adulthood"] = "18-65"
 life_stages["old"] = "+65"
 
+print(life_stages.items())
+
 for stage, years in life_stages.items():
     print(stage, "->", years)
 

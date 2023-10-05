@@ -60,7 +60,7 @@ print(default_project)
 print(divmod(4, 2))
 
 
-def custom_divmod(x, y):
+def custom_divmod(x: int, y: int):
     """Specifying the remainder and quotient"""
     DivMod = namedtuple("Divmod", "quotient remainder")
     return DivMod(*divmod(x, y))
@@ -70,3 +70,12 @@ result = custom_divmod(12, 6)
 
 print(result.quotient)
 print(result.remainder)
+
+TopTeam = namedtuple("TopTeam", "year_founded name manager", defaults=[
+                     1945, "Real Madrid", "Zinedine Zidane"])
+print(issubclass(TopTeam, tuple))
+
+newcastle = TopTeam(2002, "Newcastle United", "Bob Stewart")
+print(newcastle.year_founded)
+real_madrid = TopTeam()
+print(real_madrid)

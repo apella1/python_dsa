@@ -1,4 +1,4 @@
-"""The first data structure in collections"""
+"""The first data structure to be added to collections"""
 # * enqueue - adding an item at the end of a queue
 # * dequeue - removing an item at the end of a queue
 

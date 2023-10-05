@@ -56,3 +56,34 @@ for program, program_type in group_programs.items():
 
 
 print(issubclass(defaultdict, dict))
+
+subjects = [
+    ("subject", "sciences"),
+    ("subject", "mathematics"),
+    ("lesson", "english"),
+    ("lesson", "history"),
+]
+
+subject_groups = defaultdict(list)
+
+for subject, subject_type in subjects:
+    subject_groups[subject].append(subject_type)
+
+print(subject_groups)
+
+shows = [
+    ("comedy", "Friends"),
+    ("comedy", "Two and a Half Men"),
+    ("comedy", "Man with a Plan"),
+    ("tech", "Mr. Robot"),
+    ("tech", "Silicon Valley"),
+    ("finance", "Billions"),
+    ("finance", "Wall Street")
+]
+
+show_groups = defaultdict(list)
+
+for show, name in shows:
+    show_groups[show].append(name)
+
+print(show_groups)
