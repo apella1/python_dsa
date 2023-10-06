@@ -45,5 +45,6 @@ pprint(hash((2, 3, 5)))
 # counter is a sub class of dict therefore no restrictions
 # on the keys and values of the objects
 pprint(issubclass(Counter, dict))
+pprint(Counter("atmosphere"))
 
 # ! Differences between Counter and dict
