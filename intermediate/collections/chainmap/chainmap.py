@@ -58,3 +58,16 @@ pprint(alpha_nums)
 # * alpha_nums.pop("one") -> KeyError as the key isn't in the first mapping
 alpha_nums.clear()
 pprint(alpha_nums)
+
+# Teams
+united = {"name": "Manchester United", "trophies": 13}
+liverpool = {"name": "Liverpool FC", "trophies": 3}
+city = {"name": "Manchester City", "trophies": 7}
+
+epl = ChainMap(city, liverpool, united)
+pprint(epl.parents)
+pprint(epl.maps)
+wolves = {"name": "Wolverhampton Wanderers", "trophies": 0}
+epl = epl.new_child(wolves)
+pprint(epl)
+pprint(epl.parents)
