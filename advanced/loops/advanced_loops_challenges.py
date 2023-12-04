@@ -1,59 +1,23 @@
-"""This module covers advanced loop challenges"""
-
 # 1 Larger sum
-
-
 def larger_sum(lst1, lst2):
-    """Returning list whose sum of elements is larger
-
-    Args:
-        lst1 (_type_): _description_
-        lst2 (_type_): _description_
-
-    Returns:
-        _type_: _description_
-    """
     lst1_sum = 0
     lst2_sum = 0
-    # computing the sum of elements in lst1
     for elem in lst1:
         lst1_sum += elem
-
-    # computing the sum of elements in lst1
     for elem in lst2:
         lst2_sum += elem
-
     if lst2_sum > lst1_sum:
         return lst2
     else:
         return lst1
 
 
-# using in-built sum function
 def larger_sum2(lst1, lst2):
-    """ Using in-built sum function for the implementation
-
-    Args:
-        lst1 (list[int]): _description_
-        lst2 (list[int]): _description_
-
-    Returns:
-        list[int]: list with greater sum of elements
-    """
     return lst1 if sum(lst1) > sum(lst2) else lst2
 
+
 # 2 Over 9000
-
-
 def over_nine_thousand(lst):
-    """_summary_
-
-    Args:
-        lst (_type_): _description_
-
-    Returns:
-        _type_: _description_
-    """
     MAX_SUM = 9000
     power_sum = 0
     for elem in lst:
