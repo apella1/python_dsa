@@ -21,6 +21,6 @@ def apportion_congress(s_population, R):
     return reps
 
 
-Pop = [100, 200, 300, 400, 500]
-R = 2
-print(apportion_congress(Pop, R))
+populations = [100, 200, 300, 400, 500]
+REPRESENTATIVES = 2
+print(apportion_congress(populations, REPRESENTATIVES))
